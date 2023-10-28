@@ -18,7 +18,7 @@ app.use("/api/auth/", AuthRoutes);
 app.use("/api/messages", MessageRoutes);
 
 const server = app.listen(process.env.PORT || 3005, () => {
-  console.log(`server started on port ${process.env.PORT}`);
+  console.log(`server started on port ${process.env.PORT || 3005}`);
 });
 
 const io = new Server(server, {
